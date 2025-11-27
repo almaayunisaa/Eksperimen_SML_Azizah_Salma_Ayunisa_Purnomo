@@ -73,4 +73,7 @@ def automate_Azizah(df, save_path, file_path):
 
   return X_train, X_test, y_train, y_test
 
+df = pd.read_csv("Eksperimen_SML_Azizah_Salma_Ayunisa_Purnomo/PCOS_raw.csv")
+save_path = "Eksperimen_SML_Azizah_Salma_Ayunisa_Purnomo/preprocessing/preprocessing.joblib"
+file_path = "Eksperimen_SML_Azizah_Salma_Ayunisa_Purnomo/preprocessing/PCOS_preprocessing.csv"
 automate_Azizah(df, save_path, file_path)
