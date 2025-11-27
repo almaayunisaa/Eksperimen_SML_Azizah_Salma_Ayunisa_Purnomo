@@ -5,9 +5,13 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
 from joblib import dump
+import kagglehub
+import os
 
 def automate_Azizah(df, save_path, file_path):
+
   # Mendapatkan nama kolom tanpa kolom target
   column_names = df.columns.drop('PCOS (Y/N)')
 
@@ -68,3 +72,5 @@ def automate_Azizah(df, save_path, file_path):
   dump(preprocessor, save_path)
 
   return X_train, X_test, y_train, y_test
+
+automate_Azizah(df, save_path, file_path)
